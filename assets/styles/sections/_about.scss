@@ -1,0 +1,323 @@
+.about {
+    padding: 216px 0 120px;
+
+    @include a (tablet-xl) {
+        padding: 100px 0;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 56px;
+        margin-bottom: 120px;
+
+        @include a (tablet-xl) {
+            flex-direction: column-reverse;
+            gap: 100px;
+        }
+    }
+
+    &__left {
+        max-width: 609px;
+        width: 100%;
+        height: 475px;
+        background: url(../../assets/images/about-image.jpg);
+        position: relative;
+    }
+
+    &__rate {
+        &__wrap {
+            position: absolute;
+            background-color: #FEFEFF;
+            box-shadow: 35px 35px 65px rgba(146, 106, 120, 0.16);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            left: 96px;
+            padding: 32px;
+            top: -15%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(../../ASSETS/images/about-check-icon.svg);
+                width: 27px;
+                height: 27px;
+                top: -10px;
+            }
+        }
+
+        &__number {
+            font-size: toRem(72);
+            color: $title-color;
+            margin-bottom: 10px;
+        }
+
+        &__stars {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 16px;
+        }
+
+        &__title {
+            letter-spacing: 0.0025em;
+            color: #A6A6A6;
+            margin-bottom: 10px;
+        }
+
+        &__review {
+            letter-spacing: 0.0025em;
+            color: $title-color;
+        }
+    }
+
+    &__count {
+        &-wrap {
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            padding: 12px 32px;
+            gap: 5px;
+        }
+
+        &__content {
+            font-size: toRem(48);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &-span {
+                font-size: toRem(16);
+                line-height: 26px;
+                letter-spacing: 0.0025em;
+                color: #A6A6A6;
+                max-width: 80px;
+            }
+        }
+    }
+
+    &__right {
+        max-width: 527px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__hangtag {
+            font-size: toRem(18);
+            font-weight: 500;
+            color: $main-color;
+            width: 141px;
+            height: 50px;
+            background-color: #F8F9FE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+
+            @include a (tablet-xl) {
+                margin: 0 auto 16px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 16px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        max-width: 505px;
+        width: 100%;
+        margin-bottom: 48px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        font-weight: 500;
+        letter-spacing: 0.0025em;
+        color: #FEFEFF;
+        width: 186px;
+        height: 60px;
+        background-color: $main-color;
+        box-shadow: 24px 24px 65px rgba(81, 140, 119, 0.24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: $main-color;
+            background-color: #FEFEFF;
+            transition: .5s all ease-in-out;
+        }
+    }
+
+    &__bot {
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 48px;
+
+            @include a (tablet-xl) {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+
+        &__hangtag {
+            font-size: toRem(18);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            background-color: #F8F9FE;
+            color: $main-color;
+            width: 274px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+
+            @include a (tablet-xl) {
+                margin: 0 auto 16px;
+            }
+
+            @include a (tablet) {
+                width: 200px;
+                height: 40px;
+            }
+        }
+
+        &__title {
+            @include a (tablet-xl) {
+                text-align: center;
+            }
+        }
+
+        &__link {
+            font-size: toRem(18);
+            font-weight: 500;
+            color: $main-color;
+            padding-right: 30px;
+            position: relative;
+
+            &:hover {
+                transition: .5s all ease-in-out;
+                color: $title-color;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../../assets/images/learn-more-arrow.svg);
+                width: 25px;
+                height: 25px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__testimonial {
+
+        &__items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            @include a (tablet-xl) {
+                flex-direction: column;
+            }
+        }
+
+        &__item {
+            max-width: 376px;
+            width: 100%;
+            min-height: 350px;
+            background-color: #FEFEFF;
+            border: 1px solid #DEDCDA;
+            padding: 84px 24px 24px;
+            color: #1F2744;
+            position: relative;
+
+            &:hover {
+                transform: scaleY(1.2);
+                transition: .5s all ease-in-out;
+            }
+
+            @include a (tablet) {
+                min-height: 250px;
+            }
+
+            &:nth-child(2) h5 {
+                max-width: unset;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(../../assets/images/quote-icon.svg);
+                width: 42px;
+                height: 34px;
+                left: 24px;
+                top: 24px;
+            }
+        }
+
+        &__title {
+            font-size: toRem(18);
+            font-weight: 600;
+            letter-spacing: 0.0025em;
+            max-width: 265px;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        &__descr {
+            letter-spacing: 0.0025em;
+            margin-bottom: 24px;
+        }
+
+        &__person {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        &__name {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #0B2E29;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        &__job {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: toRem(12);
+            letter-spacing: 0.5px;
+            color: #767676;
+        }
+
+
+
+    }
+}

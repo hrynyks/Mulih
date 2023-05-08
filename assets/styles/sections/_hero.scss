@@ -53,6 +53,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
             position: relative;
 
             @include a (tablet-xl) {
@@ -111,6 +112,7 @@
             letter-spacing: 0.0025em;
             color: #A6A6A6;
             padding-right: 27px;
+            cursor: pointer;
             position: relative;
 
             &:hover {
@@ -150,6 +152,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &:hover {
+                color: $title-color;
+            }
         }
     }
 
